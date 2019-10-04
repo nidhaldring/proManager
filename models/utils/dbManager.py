@@ -15,7 +15,6 @@ class DbManager:
 							)
 
 	def execute(self,sql):
-
 		'''
 		executes the given sql
 		returning the result or none if none
