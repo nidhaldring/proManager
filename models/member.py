@@ -3,7 +3,7 @@ from models.model import Model
 from models.exceptions import *
 
 
-class User(Model):
+class Member(Model):
 
 	# id_ should only be set internally
 	def __init__(self,username,password,email,_id=None):
@@ -16,7 +16,7 @@ class User(Model):
 	@classmethod
 	def initWithDefaults(cls):
 		from config import CONFIG
-		Model.initWithDefaults(CONFIG.USERS_TABLE_NAME)
+		Model.initWithDefaults(CONFIG.MEMBERS_TABLE_NAME)
 
 	@classmethod
 	def query(cls,cond:dict,*,limit=None,desc=False,orderBy=[]) -> list:
