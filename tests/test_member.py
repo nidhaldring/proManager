@@ -60,17 +60,17 @@ class TestMember(unittest.TestCase):
 		self.assertNotEqual(u,[])
 		self.assertEqual(u[0].phone,"1")
 
-	def test_member_constructor_raises_when_missing_dbManager_attrs(self):
+	def test_member_constructor_raises_when_missing_dbManager_attr(self):
 		Member.dbManager = None
 		with self.assertRaises(ModelMissingAttributeException):
 			u = Member("1","1","2","3")
 
-	def test_member_constructor_raises_when_missing_table_attrs(self):
+	def test_member_constructor_raises_when_missing_table_attr(self):
 		Member.table = None
 		with self.assertRaises(ModelMissingAttributeException):
 			u = Member("1","1","2","3")
 
-	def test_member_constructor_raises_when_missing_queryMaker_attrs(self):
+	def test_member_constructor_raises_when_missing_queryMaker_attr(self):
 		Member.queryMaker = None
 		with self.assertRaises(ModelMissingAttributeException):
 			u = Member("1","1","2","3")
