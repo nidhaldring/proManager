@@ -5,5 +5,4 @@ class ModelNotInsertedException(Exception):pass
 
 class ModelUniqueConstraintException(Exception):pass
 
-
-class ModelMissingConstructorArgumentException(Exception):pass
+class ModelMissingAttributeException(Exception):pass
