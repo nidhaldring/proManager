@@ -8,7 +8,7 @@ class Member(Model):
 	# id_ should only be set internally
 	def __init__(self,name,surname,phone,birthdate,_id=None):
 		if not self.table or not self.dbManager or not self.queryMaker:
-			raise ModelMissingConstructorArgumentException()
+			raise ModelMissingAttributeException()
 
 		data = dict(name=name,surname=surname,phone=phone,birthdate=birthdate)
 		super().__init__(data=data,_id=_id)
